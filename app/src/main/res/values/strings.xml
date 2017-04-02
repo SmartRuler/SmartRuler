@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SmartRuler</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="appName">Smart Ruler</string>
+    <string name="slogan">Help you measure easily!</string>
+    <string name="tips">请将目标物对齐十字基准线</string>
+    <string name="distance">Distance (m)</string>
+    <string name="height">Height (m)</string>
+    <string name="screenshots">screenshots</string>
+    <string name="error">error!</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+
+    <string name="action_settings">Settings</string>
+</resources>
