@@ -120,7 +120,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/grey_60000000"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <TextView
                 android:id="@+id/orientation"
@@ -139,12 +140,12 @@
                 android:text="0"
                 android:textSize="50sp"
                 android:textColor="@color/white"/>
-            <Button
+            <ImageButton
                 android:id="@+id/changeOrientation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal"
-                android:text="changeOrientation"/>
+                android:background="@mipmap/button"/>
 
         </LinearLayout>
 

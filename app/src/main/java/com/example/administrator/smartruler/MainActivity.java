@@ -22,6 +22,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.administrator.smartruler.aboutCamera.CatchPicture;
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity
     private Thread thread;
     private TextView measurement_text, orientation_text;
     private TextView show_h, show_H, show_h_plus_H;
-    private Button changeOrientation_btn;
+    private ImageButton changeOrientation_btn;
 
     private Handler handler = new Handler(){
         @Override
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity
         show_h = (TextView)findViewById(R.id.show_h);
         show_H = (TextView)findViewById(R.id.show_H);
         show_h_plus_H = (TextView)findViewById(R.id.show_h_plus_H);
-        changeOrientation_btn = (Button)findViewById(R.id.changeOrientation);
+        changeOrientation_btn = (ImageButton) findViewById(R.id.changeOrientation);
         changeOrientation_btn.setOnClickListener(this);
 
         startOrientationService();
