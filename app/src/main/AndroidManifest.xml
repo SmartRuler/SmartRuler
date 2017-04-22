@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.smartruler">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
@@ -15,8 +15,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
 
-
     <application
+        android:name=".SmartRulerApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -25,21 +25,25 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".navigationItems.VideoActivity" />
 
-        <activity android:name=".navigationItems.VideoActivity">
-            </activity>
+        <service android:name=".sensor.OrientationService" />
 
-        <service android:name=".sensor.OrientationService">
-            </service>
+        <activity android:name=".navigationItems.photometer" />
+        <activity android:name=".navigationItems.Photometer" />
 
+        <service
+            android:name=".aboutCamera.ScreenShotService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

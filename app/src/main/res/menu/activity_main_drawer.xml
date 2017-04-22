@@ -13,9 +13,9 @@
             android:title="Instruction" />
 
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_photometer"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="photometer" />
     </group>
 
     <item android:title="Communicate">
