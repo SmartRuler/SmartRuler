@@ -1,9 +1,11 @@
 package com.example.administrator.smartruler.navigationItems;
 
 import android.app.Activity;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 import com.example.administrator.smartruler.R;
@@ -23,7 +25,10 @@ public class VideoActivity extends Activity {
         setContentView(R.layout.video_layout);
 
         videoView = (VideoView)findViewById(R.id.video_view);
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoView);
         initVideoPath();
+        videoView.setMediaController(mediaController);
         videoView.start();
     }
 
@@ -31,4 +36,5 @@ public class VideoActivity extends Activity {
         String uri = "android.resource://" + getPackageName() + "/" + R.raw.my_video_file;
         videoView.setVideoURI(Uri.parse(uri));
     }
+
 }
