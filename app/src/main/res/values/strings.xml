@@ -9,7 +9,7 @@
     <string name="distance">Distance (m)</string>
     <string name="height">Height (m)</string>
     <string name="screenshots">screenshots</string>
-    <string name="error">error!</string>
+    <string name="error">MAX</string>
     <string name="ok">Ok</string>
     <string name="cancel">Cancel</string>
 

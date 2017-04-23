@@ -79,15 +79,11 @@ public class OrientationDetector implements SensorEventListener {
     }
 
     private double getCalcAngle(){
+        //double t = -3.518 + 3.511*Math.cos(angleOfY) +3.507*Math.cos(angleOfX)-2.487*Math.cos(angleOfX)*Math.cos(angleOfY);
+        //return Math.asin(t);
         double a = Math.cos(angleOfY);
         double b =  Math.cos(angleOfX);
         return Math.asin( a*b);
-//        if(orientation == DISTANCE){
-//            return Math.asin( a*b);
-//        }else if(orientation == HEIGHT){
-//
-//        }
-//        return 0;
     }
 
     private double calibrate(double value, double calcAngle){
@@ -98,7 +94,7 @@ public class OrientationDetector implements SensorEventListener {
         }else{
             correction = (fb-1.33) / 11.0;
         }
-        return value / (1+correction);
+        return value / (1-correction);
     }
 
 }

@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity
                     }else {
                         measurement_text.setText(""+ distance);
                     }
-
                     break;
                 case GETHEIGHT:
                     measurement_text.setText("" + msg.getData().getFloat("height"));
@@ -177,7 +176,7 @@ public class MainActivity extends AppCompatActivity
         show_h.setText("h: " + h + " m");
         show_H.setText("H: " + H + " m");
         show_h_plus_H.setText("h+H = " + (double)Math.round(h_plus_H*100)/100);
-        OrientationDetector.set_h_plus_H(h_plus_H);
+        OrientationDetector.set_h_plus_H(h_plus_H - 0.1);
     }
 
     @Override

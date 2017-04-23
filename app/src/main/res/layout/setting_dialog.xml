@@ -18,7 +18,7 @@
         android:id="@+id/input_h"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your Phone Height (h): "
+        android:text="Your Height (h): "
         android:textSize="15sp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
