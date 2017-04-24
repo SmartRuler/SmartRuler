@@ -6,16 +6,16 @@
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Settings" />
+            android:title="@string/action_settings" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Instruction" />
+            android:title="@string/tutorial" />
 
         <item
             android:id="@+id/nav_photometer"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="photometer" />
+            android:title="@string/photometer" />
     </group>
 
     <item android:title="Communicate">
@@ -23,7 +23,7 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="@string/share" />
         </menu>
     </item>
 
