@@ -34,15 +34,15 @@
                 android:layout_weight="1" />
 
             <RelativeLayout
-                android:layout_width="110dp"
-                android:layout_height="110dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/scan_window">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/scanner_line"
-                    android:background="@drawable/sharelogo"
+                    android:background="@drawable/saa"
                     android:layout_centerInParent="true"/>
 
 
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="25dp"
-                android:text="分享"
+                android:text=""
                 android:textSize="20sp" />
 
         </LinearLayout>
@@ -87,36 +87,36 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:orientation="horizontal"
+            android:gravity="center"
             android:weightSum="1">
 
 
             <ImageButton
                 android:id="@+id/weixin"
-                android:layout_width="50dp"
+                android:layout_width="57dp"
                 android:layout_height="70dp"
-                android:layout_marginLeft="60dp"
-                android:background="@drawable/weixin"/>
+                android:background="@drawable/first"/>
 
             <ImageButton
                 android:id="@+id/pyq"
-                android:layout_width="50dp"
+                android:layout_width="57dp"
                 android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/pyq"/>
+                android:background="@drawable/second"/>
 
             <ImageButton
                 android:id="@+id/qqq"
-                android:layout_width="50dp"
+                android:layout_width="57dp"
                 android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/qqq"/>
+                android:background="@drawable/third"/>
 
             <ImageButton
                 android:id="@+id/qz"
-                android:layout_width="50dp"
+                android:layout_width="57dp"
                 android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/qqz"/>
+                android:background="@drawable/four"/>
 
         </LinearLayout>
 
