@@ -6,6 +6,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -23,13 +24,14 @@ import com.tencent.tauth.UiError;
 
 import java.util.ArrayList;
 
-public class ShareActivity extends AppCompatActivity {
+public class ShareActivity extends Activity {
 
     private final String APP_ID = "wxda5cdc6f805d5225";
     private IWXAPI wxApi;
 
     private Tencent mTencent;
     private String QQ_ID = "1106099966";
+    Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +71,14 @@ public class ShareActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 shareToQzone();
+            }
+        });
+
+        back = (Button)findViewById(R.id.back_button);
+        back.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                finish();
             }
         });
     }
