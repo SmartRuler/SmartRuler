@@ -29,8 +29,9 @@ import com.example.administrator.smartruler.aboutCamera.ScannerView;
 import com.example.administrator.smartruler.aboutCamera.ScreenShotService;
 import com.example.administrator.smartruler.navigationItems.Photometer;
 import com.example.administrator.smartruler.navigationItems.SettingDialog;
-import com.example.administrator.smartruler.navigationItems.ShareDialog;
-import com.example.administrator.smartruler.navigationItems.VideoActivity;
+import com.example.administrator.smartruler.navigationItems.ShareActivity;
+
+import com.example.administrator.smartruler.navigationItems.ShowVideo;
 import com.example.administrator.smartruler.sensor.OrientationDetector;
 import com.example.administrator.smartruler.sensor.OrientationService;
 
@@ -175,7 +176,7 @@ public class MainActivity extends AppCompatActivity
         double h_plus_H = h + H;
         show_h.setText("h: " + h + " m");
         show_H.setText("H: " + H + " m");
-        show_h_plus_H.setText("h+H = " + (double)Math.round(h_plus_H*100)/100);
+        show_h_plus_H.setText("h+H = " + (double)Math.round(h_plus_H*100)/100+ " m");
         OrientationDetector.set_h_plus_H(h_plus_H - 0.1);
     }
 
@@ -287,7 +288,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(MainActivity.this, VideoActivity.class);
+            Intent intent = new Intent(MainActivity.this, ShowVideo.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_manage) {
@@ -298,14 +299,14 @@ public class MainActivity extends AppCompatActivity
                     SharedPreferences.Editor editor = getSharedPreferences("data", MODE_PRIVATE).edit();
                     editor.putString("h", inputStr_h);
                     editor.putString("H", inputStr_H);
-                    editor.apply();
-                    showMeasureInfomation();
+                    editor.apply();                    showMeasureInfomation();
                 }
             });
             dialog.show();
         } else if (id == R.id.nav_share) {
-            ShareDialog dialog = new ShareDialog(MainActivity.this);
-            dialog.show();
+
+            Intent intent = new Intent(MainActivity.this, ShareActivity.class);
+            startActivity(intent);
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

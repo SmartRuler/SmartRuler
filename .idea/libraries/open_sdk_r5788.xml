@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="open_sdk_r5788">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/src/main/libs/open_sdk_r5788.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
