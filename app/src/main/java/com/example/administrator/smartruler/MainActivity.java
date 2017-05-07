@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity
 
     private void showMeasureInfomation(){
         SharedPreferences pref = getSharedPreferences("data", MODE_PRIVATE);
-        double h = Double.parseDouble(pref.getString("h","150")) / 100.0;
+        double h = Double.parseDouble(pref.getString("h","170")) / 100.0;
         double H = Double.parseDouble(pref.getString("H","0")) / 100.0;
         double h_plus_H = h + H;
         show_h.setText("h: " + h + " m");
