@@ -78,6 +78,8 @@ public class ShareActivity extends Activity implements IWXAPIEventHandler {
             }
         });
 
+        wxApi.handleIntent(getIntent(),this);
+
         back = (Button)findViewById(R.id.back_button);
         back.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -135,7 +137,6 @@ public class ShareActivity extends Activity implements IWXAPIEventHandler {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-
         setIntent(intent);
         wxApi.handleIntent(intent, ShareActivity.this);
     }
