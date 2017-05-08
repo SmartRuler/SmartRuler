@@ -1,6 +1,7 @@
 package com.example.administrator.smartruler.navigationItems;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -13,10 +14,13 @@ import android.widget.Toast;
 import com.example.administrator.smartruler.R;
 import com.tencent.connect.share.QQShare;
 import com.tencent.connect.share.QzoneShare;
+import com.tencent.mm.opensdk.modelbase.BaseReq;
+import com.tencent.mm.opensdk.modelbase.BaseResp;
 import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.opensdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.opensdk.modelmsg.WXWebpageObject;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
@@ -24,7 +28,7 @@ import com.tencent.tauth.UiError;
 
 import java.util.ArrayList;
 
-public class ShareActivity extends Activity {
+public class ShareActivity extends Activity implements IWXAPIEventHandler {
 
     private final String APP_ID = "wxda5cdc6f805d5225";
     private IWXAPI wxApi;
@@ -125,7 +129,27 @@ public class ShareActivity extends Activity {
         imgUrlList.add("https://avatars3.githubusercontent.com/u/26999387?v=3&s=200");
         params.putStringArrayList(QzoneShare.SHARE_TO_QQ_IMAGE_URL,imgUrlList);// 图片地址
         mTencent.shareToQzone(ShareActivity.this, params, new BaseUiListener( ));
+
     }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+        setIntent(intent);
+        wxApi.handleIntent(intent, ShareActivity.this);
+    }
+
+    @Override
+    public void onReq(BaseReq baseReq) {
+
+    }
+
+    @Override
+    public void onResp(BaseResp baseResp) {
+
+    }
+
 
     private class BaseUiListener implements IUiListener {
 
